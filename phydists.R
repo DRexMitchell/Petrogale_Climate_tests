@@ -25,8 +25,23 @@ mod<-varpart(sym.mat,~log(size),~phy_dists_all); mod
 showvarparts(2)
 plot(mod,digits = 2, Xnames = c('cranial size','phylogeny'), bg = c('red','blue'))
 
+allarea_rat
+
+mod<-varpart(allarea_rat,~log(size),~phy_dists_all); mod
+showvarparts(2)
+plot(mod,digits = 2, Xnames = c('cranial size','phylogeny'), bg = c('red','blue'))
 
 sym.mat <- two.d.array(pet_sym$symm.shape)
 mod<-varpart(sym.mat,~log(size),~spat,~climdata[,c(2:3,8:9,18)], ~phy_dists_all); mod
 showvarparts(4)
 plot(mod,digits = 2, Xnames = c('cranial size','geography', 'climate', 'phylogeny'), bg = c('red','orange', 'blue', 'hotpink'))
+
+
+sym.mat <- two.d.array(pet_sym$symm.shape)
+mod<-varpart(myarea_all,~log(size),~spat,~climdata[,c(2:3,8:9,18)], ~phy_dists_all); mod
+showvarparts(4)
+plot(mod,digits = 2, Xnames = c('cranial size','geography', 'climate', 'phylogeny'), bg = c('red','orange', 'blue', 'green'))
+
+mod<-varpart(myarea_all,~log(size),~spat,~climdata[,c(2:3,8:9,18)]); mod
+showvarparts(3)
+plot(mod,digits = 2, Xnames = c('cranial size','geography', 'climate'), bg = c('red','orange', 'blue'))
