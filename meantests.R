@@ -11,7 +11,7 @@ load("mean_climate_tests.rda")
 bio1_mnshape <- procD.lm(meanshapes_ord ~ climdata_ord[,1],iter=999); summary(bio1_mnshape)
 
 # Plot distribution
-bio1_plot <- plot(bio19_mnshape, type = "regression", predictor = climdata_ord[,1], reg.type = "RegScore", pch=icons_mn, bg=cols_mn, cex=exp(size_ord/100)/20) 
+bio1_plot <- plot(bio1_mnshape, type = "regression", predictor = climdata_ord[,1], reg.type = "RegScore", pch=icons_mn, bg=cols_mn, cex=exp(size_ord/100)/20) 
 plot(bio1_plot$RegScore~climdata_ord[,1], pch=icons_mn, cex=exp(size_ord/100)/20, bg = cols_mn, xlab = "Precipitation of Coldest Quarter", ylab = "Shape Score")
 
 # Do phylogenetic generalised least squares test
