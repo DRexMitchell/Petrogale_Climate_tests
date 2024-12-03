@@ -10,9 +10,9 @@ pet_sym <- bilat.symmetry(shapedata, ind=ind, land.pairs = sym, object.sym=T, cu
 gpa <- gpagen(shapedata)
 size <- gpa$Csize
 
-allometry.model <- procD.lm(pet_sym$symm.shape~log(size),iter=999); summary(allometry.model)
+allometry.model <- procD.lm(pet_sym$symm.shape~phy_dists_all,iter=999); summary(allometry.model)
 allom_plot <- plot(allometry.model, type = "regression", predictor = log(size), reg.type = "RegScore", pch=icons, cex=exp(gpa$Csize/100)/40, bg = species)
-plot(allom_plot$RegScore~log(size), pch=icons, cex=exp(gpa$Csize/100)/40, bg = species, xlab = "log(cranial centroid size)", ylab = "shape score")
+plot(-1*allom_plot$RegScore~log(size), pch=icons, cex=exp(gpa$Csize/100)/40, bg = species, xlab = "log(cranial centroid size)", ylab = "shape score")
 
 bergmann.model <- procD.lm(log(size)~lat, iter=999); summary(bergmann.model)
 berg_plot <- plot(bergmann.model, type = "regression", predictor = lat, reg.type = "RegScore", pch=icons, cex=exp(gpa$Csize/100)/40, bg = species) 

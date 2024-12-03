@@ -65,4 +65,4 @@ physignal(size_ord, tree, iter=999)
 # For all climate variables 1 to 19, test correlations and plot:
 bullae_clim <- procD.lm(bullae_ord~climdata_ord[,1], iter=999); summary(bullae_clim)
 bullae_clim_phy <- procD.pgls(bullae_ord~climdata_ord[,1], tree, iter=999); summary(bullae_clim_phy)
-plot(bullae_ord~climdata_ord[,1], pch=icons_mn, cex=exp(size_ord/100)/20, bg = cols_mn)
+plot(bullae_ord~climdata_ord[,12], pch=icons_mn, cex=exp(size_ord/100)/20, bg = cols_mn)
