@@ -5,6 +5,7 @@ phy_dists <- cophenetic.phylo(tree)
 
 
 n <- c(20,20,6,4,20,19,26,20,25,10,7,14,18,16,17,17,16,19,19,20,21)
+
 species_names <- c("P. assimilis", "P. brachyotis", "P. burbidgei", "P. coenensis", "P. concinna", "P. godmani", "P. herberti", "P. inornata", "P. l. centralis", "P. l. hacketti", "P. l. kimberleyensis", "P. l. lateralis",  "P. l. pearsoni", "P. mareeba", "P. penicillata", "P. persephone", "P. purpureicollis", "P. rothschildi", "P. sharmani", "P. wilkinsi", "P. xanthopus")
 
 clade <- c("penicillata","brachyotis","brachyotis","penicillata","brachyotis","penicillata","penicillata","penicillata","lateralis","lateralis","lateralis","lateralis","lateralis","penicillata","penicillata","xanthopus","purpureicollis","rothschildi","penicillata","brachyotis","xanthopus") 
