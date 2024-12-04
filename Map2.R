@@ -46,7 +46,7 @@ t <- s + annotation_north_arrow(location = "bl", which_north = "true", pad_x = u
 map2color <- function(x, pal, limits = range(x)){
   pal[findInterval(x, seq(limits[1], limits[2], length.out = length(pal) + 1), 
                    all.inside=TRUE)]
-}
+} 
 cont <- colorRampPalette(c("hotpink","darkblue"), interpolate = "linear")
 colage <- cont(15)
 
